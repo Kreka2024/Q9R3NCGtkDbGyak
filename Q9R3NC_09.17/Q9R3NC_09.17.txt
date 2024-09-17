@@ -1,0 +1,12 @@
+local 
+1. git status - állapot ellenőrzés
+2. git add "Q9R3NC_09.17" - feltöltés vagy ha több fájl van benne, akkor
+3. git add . - feltölti az összes fájlt, ami a NEPTUNKOD_09.17-be van
+4. git commit -m "3 fájl mentés" - feltöltés a stage-re
+5. git log - látni milyen commitok készültek
+6. git shortlog - csak annyi látható
+
+
+
+remmote repository
+git push - majd frissités
