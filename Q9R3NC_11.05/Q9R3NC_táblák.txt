@@ -1,0 +1,5 @@
+CREATE TABLE Alkatresz(akod INT NOT NULL, nev CHAR(50) NOT NULL, PRIMARY KEY (akod));
+CREATE TABLE Egysegek(aru INT NOT NULL, db INT CHECK (db > 0), FOREIGN KEY (aru) REFERENCES Termek(tkod));
+CREATE TABLE Gyarto (adoszam INT NOT NULL,nev CHAR(40), irsz CHAR(4), varos CHAR(30), utca CHAR(60), PRIMARY KEY (adoszam));
+CREATE TABLE Komponens (termek INT NOT NULL, alkatresz INT NOT NULL, PRIMARY KEY (termek, alkatresz), FOREIGN KEY (termek) REFERENCES Weapons(tkod) FOREIGN KEY (alkatresz) REFERENCES Players(akod));
+CREATE TABLE Termek (tkod INT NOT NULL, nev CHAR(50), ear INT CHECK (ear > 0), gyarto INT NOT NULL, PRIMARY KEY (tkod), FOREIGN KEY (gyarto) REFERENCES Gyarto(adoszam));
